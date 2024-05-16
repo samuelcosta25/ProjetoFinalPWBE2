@@ -1,0 +1,9 @@
+conferencia realizada anualmente;
+gestao e controle dos ambientes, ativos separados por sala;
+controle de manutenções (histórico);
+filtros por numero da sala;
+registros, transferencias e exclusoes;
+metodos mediante aprovação de um gestor;
+filtros por setor e tipos de equipamento;
+proposta é criar um mecanismo de gestao de ativos, que seja agradevel para a utilizacao do usuario, por exemplo o responsavel da sala conseguir intuitivelmente cadastrar,
+alterar, e transferir os ativos
