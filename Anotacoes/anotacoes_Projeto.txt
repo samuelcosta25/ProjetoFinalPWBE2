@@ -6,4 +6,25 @@ registros, transferencias e exclusoes;
 metodos mediante aprovação de um gestor;
 filtros por setor e tipos de equipamento;
 proposta é criar um mecanismo de gestao de ativos, que seja agradevel para a utilizacao do usuario, por exemplo o responsavel da sala conseguir intuitivelmente cadastrar,
-alterar, e transferir os ativos
+alterar, e transferir os ativos.
+
+
+2 tipos de usuario: usuario(realiza as requisições em geral) e adm(confirma as requisições em geral):
+
+Adm:
+ -cadastra usuario;
+ -REALIZA todas as operações dos ativos;
+ -autoriza requisições do usuario;
+ -vincula uma sala ao usuario;
+ -filtragem dos ativos (tipo do equipamento, bloco, setor, sala, responsável)
+
+Usuario:
+ -REQUISITA todas as operações ao adm;
+ -filtragem dos ativos (tipo do equipamento, bloco, setor, sala, responsável)
+ 
+
+Tabelas
+ - adm;
+ - usuario;
+ - equipamentos conformes;
+ - equipamentos pendentes;
