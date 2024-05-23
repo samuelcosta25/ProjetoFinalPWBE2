@@ -2,6 +2,7 @@ package webapp.gerenciamento_senai.Model;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 
@@ -9,18 +10,18 @@ public class Equipamento implements Serializable {
 
 //  atributos
 @Id
-String patrimonio;
+String ativo;//patrimonio
 String nome;
 String categoria;
-Boolean ativo;
+String status;
 
 
 // métodos
-public String getPatrimonio() {
-    return patrimonio;
+public String getAtivo() {
+    return ativo;
 }
-public void setPatrimonio(String patrimonio) {
-    this.patrimonio = patrimonio;
+public void setAtivo(String ativo) {
+    this.ativo = ativo;
 }
 
 public String getNome() {
@@ -37,11 +38,11 @@ public void setCategoria(String categoria) {
     this.categoria = categoria;
 }
 
-public Boolean getAtivo() {
-    return ativo;
+public String getStatus() {
+    return status;
 }
-public void setAtivo(Boolean ativo) {
-    this.ativo = ativo;
+public void setStatus(String status) {
+    this.status = status;
 }
 
 
