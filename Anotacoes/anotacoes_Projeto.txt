@@ -23,8 +23,3 @@ Usuario:
  -filtragem dos ativos (tipo do equipamento, bloco, setor, sala, responsável)
  
 
-Tabelas
- - adm;
- - usuario;
- - equipamentos conformes;
- - equipamentos pendentes;
