@@ -1,4 +1,4 @@
-package webapp.gerenciamento_senai;
+package webapp.gerenciamento_senai.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
     
 
-@GetMapping("/")
-public String acessarIndex(){
-    return "index";
-}
+    @GetMapping("/")
+    public String acessoHome() {
+        return "index";
+    }
 }
