@@ -1,43 +1,47 @@
-<header>
-    <div class="profile">
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org/">
 
-        <div class="requests">
-            <div class="menu-lines">
-                <span></span>
-                <span></span>
-                <span></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+<header>
+    <div class="container-fluid">
+
+
+        <a href="#"><img class="logo" src="img/logo_senai.png"></a>
+        <h1>Controle de Patrimônios</h1>
+        <nav class="dropdown">
+
+            <div class="dropdown">
+                <button  class="dropbtn">Home</button>
+            
             </div>
 
-            <ul class="requests-pending">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Login</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#about">Adm</a>
+                        <a href="#contact">Funcionario</a>
+                    </div>
+                </div>
 
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Cadastro</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#about">Adm</a>
+                        <a href="#contact">Funcionario</a>
+                    </div>
+                </div>
+               
+                <div class="dropdown">
+                    <button  class="dropbtn">Patrimônios</button>
+                    
+                </div>
             </ul>
-        </div>
-    </div>
-
-    <div class="search">
-
-        <div class="search-bar">
-
-            <input type="text">
-            <p>|</p>
-
-            <select name="options" id="options">
-                <option value=""></option>
-                <option value="">Por sala</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="add-new">
-        <div class="add-adm">
-            <button><a href="#">+</a>add adm</button>
-            
-            <button><a href="#">-</a>remover adm</button>
-        </div>
-        <div class="add-employee">
-            <button><a href="#">+</a>add funcionário</button>
-            
-            <button><a href="#">-</a>remover funcionário</button>
-        </div>
+        </nav>
     </div>
 </header>
+
+</html>
