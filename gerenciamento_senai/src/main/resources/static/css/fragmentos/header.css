@@ -1,0 +1,92 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile .requests {
+    position: relative;
+    margin-right: 20px;
+}
+
+.profile .requests .menu-lines {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile .requests .menu-lines span {
+    width: 100%;
+    height: 2px;
+    background-color: #333; /* Linhas do menu */
+}
+
+.search {
+    flex: 1;
+}
+
+.search .search-bar {
+    position: relative;
+}
+
+.search .search-bar input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search .search-bar p {
+    position: absolute;
+    top: 50%;
+    right: 215px;
+    transform: translateY(-50%);
+    color: #999; /* Cor do separador */
+}
+
+.search .search-bar #options {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-new {
+    display: flex;
+    align-items: center;
+}
+
+.add-new .add-adm button,
+.add-new .add-employee button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e30613; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-new .add-adm button:hover,
+.add-new .add-employee button:hover {
+    background-color: #e30613; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.add-new .add-adm button a,
+.add-new .add-employee button a {
+    color: #fff; /* Cor do texto do link */
+    text-decoration: none;
+}
+

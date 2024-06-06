@@ -5,7 +5,7 @@ import java.io.Serializable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-
+@Entity
 public class Equipamento implements Serializable {
 
 //  atributos

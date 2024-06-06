@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+<html lang="pt-br" xmlns:th="https://thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patrimônios</title>
-    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <link rel="stylesheet" th:href="@{css/fragmentos/header.css}">
+    <link rel="stylesheet" th:href="@{css/cadastroCss/cadEquipamento.css}">
+    <link rel="stylesheet" th:href="@{css/style.css}">
 </head>
 
 <body>
 
     <div class="container">
         <div th:insert="~{fragmentos/header :: header}"></div>
+        <div class="section-cad-equipamento" th:insert="~{cadastro/cadastroEquipamento :: section}"></div>
+
+        <button onclick="formView()" class="cad-equip">+</button>
     </div>
 
 </body>
+
+<script>
+    
+    var cadastroEquipamento = document.querySelector(".section-cad-equipamento")
+    var button = document.querySelector(".cad-equip");
+    function formView(){
+        if (cadastroEquipamento.style.display == '') {
+            // cadastroEquipamento.display = 'block'
+            cadastroEquipamento.style.display = 'flex'
+            // cadastroEquipamento.style.justify_content = 'center'
+
+        } else {
+            cadastroEquipamento.style.display = ''
+
+        }
+    }
+       
+   
+
+</script>
 
 </html>
