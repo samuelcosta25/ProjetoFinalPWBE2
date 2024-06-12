@@ -1,4 +1,8 @@
 
+:root{
+    --mainfont:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .cadastro-equipamento {
     background-color: #fff;
     padding: 30px;
@@ -8,6 +12,7 @@
     display: flex;
     flex-direction: column;
 justify-content: center;
+align-items: center;
     width: 100%;
 }
 
@@ -16,49 +21,101 @@ justify-content: center;
     color: #333;
 }
 
+
 .equipamento-form {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    animation: fadeIn 1s ease-out;
+}
+
+.img-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.campo-img {
+    width: 50px;
+    height: 50px;
+    background: #dfe6e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.file-input {
+    display: none;
+}
+
+.campo-img:hover {
+    background: #b2bec3;
+    cursor: pointer;
+}
+
+.campo-img::after {
+    content: '📷';
+    font-size: 24px;
+    color: #636e72;
 }
 
 .form-group {
-    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
+.top-inputs, .bottom-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-input[type="text"],
-#status {
-    /* width: calc(100% - 24px); Considerando o padding */
-    padding: 12px;
-    border: 1px solid #ccc;
+.form-group input, .form-group select, .form-group button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfe6e9;
     border-radius: 5px;
-    font-size: 16px;
+    transition: all 0.3s ease;
 }
 
-input[type="checkbox"] {
-    margin-right: 5px;
+input:focus, select:focus, button:focus {
+    border-color: #74b9ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(116, 185, 255, 0.5);
 }
 
 button.add-equip {
-    width: 100%;
-    padding: 12px;
-    background-color: #e30613;
+    background: #e3092a;
     color: #fff;
-    border: none;
-    border-radius: 5px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 16px;
+    transition: background 0.3s ease;
+    border: none;
+    padding: 7px 15px 7px 15px;
+    border-radius: 10px;
 }
 
 button.add-equip:hover {
-    background-color: #e30613;
+    transition: .2s;
+    background-color: transparent;
+    border: 2px solid #e3092a;
+    color: #e3092a;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
