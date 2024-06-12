@@ -2,54 +2,72 @@ package webapp.gerenciamento_senai.Model;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-
+@Entity
 public class Administrador implements Serializable {
 
-// atributos
-@Id
-int cpf;
-String nome;
-String email;
-String senha;
-int telefone;
+    // atributos
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Integer id;
+    String cpf;
+    String nome;
+    String email;
+    String senha;
+    String telefone;
 
+    public Integer getId() {
+        return id;
+    }
 
-// métodos
-public int getCpf() {
-    return cpf;
-}
-public void setCpf(int cpf) {
-    this.cpf = cpf;
-}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-public String getNome() {
-    return nome;
-}
-public void setNome(String nome) {
-    this.nome = nome;
-}
+    public String getCpf() {
+        return cpf;
+    }
 
-public String getEmail() {
-    return email;
-}
-public void setEmail(String email) {
-    this.email = email;
-}
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 
-public String getSenha() {
-    return senha;
-}
-public void setSenha(String senha) {
-    this.senha = senha;
-}
+    public String getNome() {
+        return nome;
+    }
 
-public int getTelefone() {
-    return telefone;
-}
-public void setTelefone(int telefone) {
-    this.telefone = telefone;
-}
-    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    // métodos
+
 }

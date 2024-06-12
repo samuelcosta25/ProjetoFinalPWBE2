@@ -3,7 +3,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff; /* Fundo branco */
+    background-color: #e3063d; /* Fundo branco */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
@@ -14,7 +14,10 @@ header {
 
 .profile .requests {
     position: relative;
-    margin-right: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile .requests .menu-lines {
@@ -29,7 +32,7 @@ header {
 .profile .requests .menu-lines span {
     width: 100%;
     height: 2px;
-    background-color: #333; /* Linhas do menu */
+    background-color: #ffffff; /* Linhas do menu */
 }
 
 .search {
@@ -61,32 +64,30 @@ header {
     border-radius: 5px;
 }
 
-.add-new {
+/* MENU */
+.menu {
+    width: 200px;
+    height: 90%;
+    position: fixed;
+    background-color: #e3063d;
+    left: -200px;
+    top: 80px;
+    transition: .6s;
     display: flex;
+    align-items: flex-end;
+}
+.menu .container-menu{
+    height: 95%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-
-.add-new .add-adm button,
-.add-new .add-employee button {
-    padding: 10px 20px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #e30613; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.menu .container-menu .links-menu, .links-menu li{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
-
-.add-new .add-adm button:hover,
-.add-new .add-employee button:hover {
-    background-color: #e30613; /* Cor de fundo do botão ao passar o mouse */
-}
-
-.add-new .add-adm button a,
-.add-new .add-employee button a {
-    color: #fff; /* Cor do texto do link */
-    text-decoration: none;
-}
-

@@ -14,7 +14,7 @@
 
     <div class="container">
         <div th:insert="~{fragmentos/header :: header}"></div>
-        <div class="section-cad-equipamento" th:insert="~{cadastro/cadastroEquipamento :: section}"></div>
+        <div class="section-cad-equipamento" th:insert="~{cadastro/cadastrarEquipamento :: section}"></div>
 
         <button onclick="formView()" class="cad-equip">+</button>
     </div>
@@ -22,10 +22,10 @@
 </body>
 
 <script>
-    
+
     var cadastroEquipamento = document.querySelector(".section-cad-equipamento")
     var button = document.querySelector(".cad-equip");
-    function formView(){
+    function formView() {
         if (cadastroEquipamento.style.display == '') {
             // cadastroEquipamento.display = 'block'
             cadastroEquipamento.style.display = 'flex'
@@ -36,8 +36,17 @@
 
         }
     }
-       
-   
+
+    var menu = document.querySelector(".menu")
+
+    function abrirMenu() {
+        if (menu.style.left === '-200px') {
+            menu.style.left = '0px'
+        }
+        else {
+            menu.style.left = '-200px'
+        }
+    }
 
 </script>
 

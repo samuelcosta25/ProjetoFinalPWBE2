@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="https://thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header Lindo</title>
+    <title>Login</title>
     <link rel="stylesheet" th:href="@{css/loginCss/login.css}">
 </head>
 
@@ -12,8 +12,9 @@
 
 
     <main class="login-inicial">
-        <form class="form-login-inicial" action="" method="post">
+        <form class="form-login-inicial" action="logarAdmUser" method="post">
             <h2>Login</h2>
+            <p class="mensagem" th:text="${mensagem}" style="color: rgb(255, 0, 0);"></p>
             <div class="inputs-login-inicial">
                 <input type="email" name="email" placeholder="E-mail" required>
                 <input type="password" name="senha" placeholder="Senha" required>
@@ -21,7 +22,7 @@
                     <a href="">Esqueceu sua senha?</a>
                 </div>
             </div>
-            <button type="submit">Entrar</button>
+                <button type="submit">Entrar</button>          
         </form>
         <section class="background">
             <div class="cube" style="width:15px ; height: 15px; animation-duration: 5s; top: 10%"></div>
