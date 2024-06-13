@@ -39,7 +39,7 @@ public class LoginController {
         try {
             // Verifica se os campos estão preenchidos corretamente
             if (professor.getEmail().isEmpty() || professor.getSenha().isEmpty()) {
-                attributes.addFlashAttribute("mensagem", "Preencha os campos corretamente!!");
+            attributes.addFlashAttribute("mensagem", "Preencha os campos corretamente!!");  
                 // return new ModelAndView("redirect:login");
             } else {
                 // Verifica as credenciais do usuário comum

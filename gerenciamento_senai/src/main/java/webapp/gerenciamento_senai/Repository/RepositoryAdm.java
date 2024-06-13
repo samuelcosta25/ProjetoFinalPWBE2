@@ -8,4 +8,6 @@ public interface RepositoryAdm extends CrudRepository<Administrador, Integer> {
     
     boolean existsBySenha(String senha);
     boolean existsByEmail(String email);
+    boolean existsByCpf(String cpf);
+
 }
