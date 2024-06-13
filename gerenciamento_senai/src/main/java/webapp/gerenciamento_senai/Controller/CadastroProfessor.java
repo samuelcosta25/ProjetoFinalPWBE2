@@ -18,7 +18,7 @@ public class CadastroProfessor {
     @PostMapping("cadastrar-professor")
     public ModelAndView cadastrarProfessor(Professor professor, RedirectAttributes attributes) {
         boolean professorExists = repository.existsByCpf(professor.getCpf());
-        ModelAndView mv = new ModelAndView("redirect:/"); // Redirecionar para a página de cadastro (ajuste conforme necessário)
+        ModelAndView mv = new ModelAndView("redirect:/Administrador"); // Redirecionar para a página de cadastro (ajuste conforme necessário)
 
         try {
             if (professorExists) {
