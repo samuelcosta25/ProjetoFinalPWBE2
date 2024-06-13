@@ -7,9 +7,10 @@
     <title>Patrimônios</title>
 
 </head>
+
 <body>
-    
-<!-- apenas para teste -->
+
+    <!-- apenas para teste -->
     <!-- ver sobre medidas -->
     <style>
         :root {
@@ -17,6 +18,7 @@
             --cinza: #80808017;
             --branco: #ffffff;
             --verde: #37c237d8;
+            --vermelho: #e62525d5;
         }
 
         body {
@@ -31,6 +33,7 @@
             height: 100vh;
             display: none;
             background-color: var(--cinza);
+            filter: blur(50px);
             z-index: 9;
         }
 
@@ -41,7 +44,7 @@
         }
 
         header {
-            width: 95%;
+            width: 100%;
             height: 15vh;
             display: flex;
             justify-content: center;
@@ -131,20 +134,21 @@
         }
 
         .acoes {
-            width: 30%;
+            width: 20%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .acoes button {
+        #btn-acoes {
             width: 100%;
             background-color: var(--verde);
             color: var(--branco);
             border: 1px solid var(--preto);
             border-radius: 5px;
             cursor: pointer;
+            display: flex;
         }
 
         .acoes-visivel {
@@ -159,14 +163,27 @@
             /* porque so funciona o alinhamento com o justify-content> conter */
         }
 
+        .fechar {
+            width: 100%;
+            height: 20px;
+        }
+
+        #btn-fechar {
+            width: 30px;
+            height: 30px;
+            background-color: var(--vermelho);
+            border: none;
+            color: var(--branco);
+        }
+
         .add-administrador {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
         }
 
         .add-funcionarios {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
         }
 
         .acoes-visivel button {
@@ -241,10 +258,13 @@
 
                 <div class="acoes">
                     <div class="adicionar">
-                        <button type="button">Adicionar novo</button>
+                        <button type="button" id="btn-acoes" onclick="menuAddnovo()">Adicionar novo</button>
                     </div>
 
                     <div class="acoes-visivel">
+                        <div class="fechar">
+                            <button type="button" id="btn-fechar" onclick="fecharMenuAdd()">X</button>
+                        </div>
                         <div class="add-administrador">
 
                             <button type="button">Adicionar Administrador</button>
@@ -292,7 +312,7 @@
             var solicitacoes = document.querySelector(".solicitacoes");
             var fundo = document.querySelector(".fundo");
 
-            window.menuSolicToggle = function() {
+            window.menuSolicToggle = function () {
                 if (solicitacoes.style.display === "block") {
                     solicitacoes.style.display = "none";
                     fundo.style.display = "none";
@@ -303,6 +323,48 @@
                 console.log("Display:", solicitacoes.style.display);
             };
         });
+
+        // para adicionra novos
+
+        document.addEventListener("DOMContentLoaded", () => {
+            var divAcoes = document.querySelector(".acoes-visivel");
+            var divAcoesVisivel = document.querySelector("#btn-acoes");
+
+
+            window.menuAddnovo = function () {
+                // Obtém o estilo computado da divAcoes
+                // do jeito anterios pega apensa estilos inline
+                var estiloDisplay = window.getComputedStyle(divAcoes).getPropertyValue("display");
+                if (estiloDisplay === "flex") {
+                    divAcoes.style.display = "none";
+                    divAcoesVisivel.style.display = "flex";
+                } else {
+                    divAcoes.style.display = "flex";
+                    divAcoesVisivel.style.display = "none";
+                }
+            }
+
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            var divAcoes = document.querySelector(".acoes-visivel");
+            var divAcoesVisivel = document.querySelector("#btn-acoes");
+            window.fecharMenuAdd = function () {
+                var estiloDisplay = window.getComputedStyle(divAcoes).getPropertyValue("display");
+                if (estiloDisplay === "none") {
+                    divAcoes.style.display = "flex";
+                    divAcoesVisivel.style.display = "none";
+                } else {
+                    divAcoes.style.display = "none";
+                    divAcoesVisivel.style.display = "flex";
+
+
+                }
+            }
+
+        })
+
     </script>
 </body>
+
 </html>
