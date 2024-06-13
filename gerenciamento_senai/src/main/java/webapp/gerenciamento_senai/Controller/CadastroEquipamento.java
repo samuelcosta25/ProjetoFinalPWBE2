@@ -16,25 +16,27 @@ public class CadastroEquipamento {
     @Autowired
     private RepositoryEquipamento repository;
 
-    ModelAndView mv = new ModelAndView();
+    ModelAndView mv = new ModelAndView("redirect:/");
 
     @PostMapping("cadastrar-equipamento")
-    public void cadastrarEquipamento(Equipamento equipamento, RedirectAttributes attributes ) {
+    public ModelAndView cadastrarEquipamento(Equipamento equipamento, RedirectAttributes attributes ) {
 
         boolean getAtivo = repository.existsById(equipamento.getAtivo());
          
         try {
             if (getAtivo) {                
                 attributes.addFlashAttribute("messageError", "Este Equipamento já Existe !!!");
-            }
-            else{
-                attributes.addFlashAttribute("message", "Equipamento Cadastrado com Sucesso !!!");
-                repository.save(equipamento);
-            }
-            
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+                }
+                else{
+                    attributes.addFlashAttribute("message", "Equipamento Cadastrado com Sucesso !!!");
+                    repository.save(equipamento);
+                    
+                    }
+                    
+                    } catch (Exception e) {
+                        System.out.println(e);
+                        }
+                    return mv;
 
     }
     

@@ -1,7 +1,7 @@
 package webapp.gerenciamento_senai.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
+// import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.stereotype.Controller;
 
 import webapp.gerenciamento_senai.Model.Administrador;
@@ -9,9 +9,9 @@ import webapp.gerenciamento_senai.Model.Usuario;
 import webapp.gerenciamento_senai.Repository.RepositoryAdm;
 import webapp.gerenciamento_senai.Repository.RepositoryUser;
 
-import org.springframework.web.bind.annotation.ModelAttribute;
+// import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+// import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 

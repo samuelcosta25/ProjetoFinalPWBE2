@@ -7,6 +7,7 @@
     <title>Patrimônios</title>
     <link rel="stylesheet" th:href="@{css/fragmentos/header.css}">
     <link rel="stylesheet" th:href="@{css/cadastroCss/cadEquipamento.css}">
+    <link rel="stylesheet" th:href="@{css/cadastroCss/cadProfessor.css}">
     <link rel="stylesheet" th:href="@{css/style.css}">
 </head>
 
@@ -15,6 +16,8 @@
     <div class="container">
         <div th:insert="~{fragmentos/header :: header}"></div>
         <div class="section-cad-equipamento" th:insert="~{cadastro/cadastrarEquipamento :: section}"></div>
+
+        <div class="section-cad-professor" th:insert="~{cadastro/cadastrarProfessor :: section}"></div>
 
         <button onclick="formView()" class="cad-equip">+</button>
     </div>
@@ -47,7 +50,20 @@
             menu.style.left = '-200px'
         }
     }
+// cadastro professor
 
+var linkProfessor = document.querySelector("#cad-professor")
+var sectionProf = document.querySelector(".section-cad-professor")
+var display = window.getComputedStyle(sectionProf).display
+
+function abrirCadProf(){
+    if (sectionProf.style.display === 'none') {
+        sectionProf.style.display = 'block'
+    }else{
+        sectionProf.style.display = 'none'
+    }
+}
+linkProfessor.addEventListener('click', abrirCadProf);
 </script>
 
 </html>
